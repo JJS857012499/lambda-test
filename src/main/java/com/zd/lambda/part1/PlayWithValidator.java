@@ -18,7 +18,7 @@ public class PlayWithValidator {
         Predicate<Person> p2 = t -> t.getFirstName() == "";
         Predicate<Person> p3 = t -> t.getAge() < 50;
 
-        Validator<Person> validator = Validator.<Person>firstValidate(p1, "不能为空")
+        Validator<Person> validator = Validator.<Person>firstValidate(p1, "需要为空")
                 .thenValidate(p2, "需要空串")
                 .thenValidate(p3, "需要小于50");
 
